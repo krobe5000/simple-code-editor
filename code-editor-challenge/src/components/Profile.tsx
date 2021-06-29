@@ -13,8 +13,8 @@ const Profile = () => {
   const { user, isAuthenticated }: Auth0Props = useAuth0();
 
   return isAuthenticated ? (
-    <Grid>
-      <Grid item xs={12} alignContent="center">
+    <Grid container alignContent="center">
+      <Grid item xs={12}>
         <Avatar src={user.picture} alt={user.name} />
         <Typography variant="h5">{user.name}</Typography>
       </Grid>
